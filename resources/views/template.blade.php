@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset("/assets/css/home.css") }}">
+    <link rel="icon" href="{{asset("/assets/img/welcome.png") }}">
+    <title>IFconvert</title>
 </head>
 <body>
     <nav class="navbar">
         <div class="container">
             <a href="{{ route('home') }}" class="logo">IFconvert</a>
             <ul class="nav-links">
-                <li><a class="kontak">Contact</a></li>
+            <li><a href="https://wa.me/6282172369989" class="kontak">Contact</a></li>
             </ul>
         </div>
     </nav>
