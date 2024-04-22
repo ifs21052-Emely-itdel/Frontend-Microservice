@@ -1,12 +1,12 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 290px;
-  padding: 0;
+  padding: 10px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45vh;
+  min-height: 100vh; 
   background-color: #f5f5fa;
+  margin: 0; 
 }
 
 .container {
@@ -15,54 +15,47 @@ body {
 
 .pcn {
   font-weight: 600;
-  font-size: 65px; 
-  line-height: 12px; 
-  color: #33333b; 
-  text-align: center; 
-  margin-bottom: 50px;
+  font-size: 3vw; 
+  line-height: 1.2; 
+  color: #33333b;
+  margin-bottom: 3vh; 
   font-style: bold;
-  margin-top: 200px;
 }
 
 p {
   font-weight: 200;
-  font-size: 25px; 
-  line-height: 32px; 
-  color: #61677A; 
-  text-align: center; 
-  margin-bottom: 10px;
+  font-size: 2vw;
+  line-height: 1.5; 
+  color: #61677A;
+  margin-bottom: 2vh; 
   font-style: bold;
 }
 
-
 #pdf-form {
-  margin-top: 50px;
+  margin-top: 5vh; 
 }
 
 #pdf-file {
   display: block;
   margin: 0 auto;
-  margin-bottom: 20px;
+  margin-bottom: 3vh;
   color: black;
   background-color: none;
   border: none;
-  padding: 10px; 
+  padding: 10px;
 }
 
 #convert-btn {
   background-color: #D6589F;
   color: #fff;
-  padding: 35px 160px; 
+  padding: 3vh 7vw; 
   border: none;
   border-radius: 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  font-size: 40px; 
+  font-size: 2vw;
 }
-
-
 
 #convert-btn:hover {
   background-color: #D20062;
 }
-
