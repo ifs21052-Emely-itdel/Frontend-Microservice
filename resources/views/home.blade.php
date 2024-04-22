@@ -19,21 +19,21 @@
             <div class="card" id="komprespdf">
                 <i class="fas fa-file-pdf"></i>
                 <img src="{{ asset('/assets/img/iconpdf.png') }}" alt="PDF Icon" class="card-icon">
-                <h2>Kompress PDF</h2>
+                <h2>Compress PDF files</h2>
                 <p>Kompress file PDF Anda untuk mengurangi ukuran file.</p>
             </div>
         </a>
             
-            <a href="{{ route('komprespdf') }}" class="kompres">
+            <a href="{{ route('komprespng') }}" class="kompres">
             <div class="card">
                 <i class="fas fa-file-word"></i>
                 <img src="{{ asset('/assets/img/iconpng.png') }}" alt="Word Icon" class="card-icon">
-                <h2>Kompress PNG</h2>
+                <h2>Compress PNG files</h2>
                 <p>Kompress file PNG Anda untuk mengurangi ukuran file.</p>
             </div>
             </a>
 
-    <a href="{{ route('komprespdf') }}" class="kompres">
+    <a href="{{ route('konvertaudio') }}" class="kompres">
             <div class="card">
                 <i class="fas fa-file-video"></i>
                 <img src="{{ asset('/assets/img/convert.png') }}" alt="Video to Audio Icon" class="card-icon">

@@ -12,7 +12,7 @@
         <div class="container">
             <a href="{{ route('home') }}" class="logo">IFconvert</a>
             <ul class="nav-links">
-            <li><a href="https://wa.me/6282172369989" class="kontak">Contact</a></li>
+            <li><a href="https://wa.me/6282172369989" class="kontak">Kontak</a></li>
             </ul>
         </div>
     </nav>

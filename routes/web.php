@@ -26,3 +26,11 @@ Route::get('/home', function () {
 Route::get('/komprespdf', function () {
     return view('komprespdf');
 })->name('komprespdf');
+
+Route::get('/komprespng', function () {
+    return view('komprespng');
+})->name('komprespng');
+
+Route::get('/konvertaudio', function () {
+    return view('konvertaudio');
+})->name('konvertaudio');

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="pcn">PDF Converter</h1>
+        <h1 class="pcn">Compress PDF files</h1>
         <p>Maximize quality, minimize size: Optimize your PDFs effortlessly.</p>
         <form id="pdf-form" enctype="multipart/form-data">
             <div>
