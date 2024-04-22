@@ -16,7 +16,7 @@ p {
     font-family: 'Montserrat', sans-serif;
 }
 
-.navbar .nav-links li a {
+.navbar .nav-links li .kontak {
     font-family: 'Nunito', sans-serif; 
 }
 
@@ -27,19 +27,20 @@ p {
 .container {
     width: 90%;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .navbar {
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
     padding: 5px 0;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    font-size: 16px;
+    font-size: 20px;
 }
 
 .navbar .container {
@@ -61,41 +62,48 @@ p {
     padding: 0;
 }
 
+.navbar .nav-links li .kontak {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #D6589F; 
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links li .kontak:hover {
+    background-color: #D20062; 
+}
+
+
 .navbar .nav-links li {
     display: inline;
     margin-left: 15px;
 }
 
-.navbar .nav-links li a {
-    text-decoration: none;
-    color: #333;
-}
-
-.navbar .nav-links li a:hover {
-    color: #007bff;
-}
 
 .card-container {
     display: flex;
-    flex-wrap: wrap; /* Kartu-kartu akan pindah ke baris baru saat tidak cukup lebar */
+    flex-wrap: wrap; 
     justify-content: space-between;
     margin-top: 50px;
 }
 
 @media screen and (max-width: 768px) {
-    .card {
-        flex-basis: calc(50% - 20px); /* Ubah lebar kartu menjadi 50% saat layar diperkecil */
+    .kompres {
+        flex-basis: calc(50% - 20px);
     }
 }
 
 @media screen and (max-width: 480px) {
-    .card {
-        flex-basis: calc(100% - 20px); /* Ubah lebar kartu menjadi 100% saat layar sangat kecil */
+    .kompres {
+        flex-basis: calc(100% - 20px); 
     }
 }
 
 
-.card {
+.kompres {
     position: relative;
     width: calc(30% - 20px);
     background-color: #f8f9fa;
@@ -103,16 +111,18 @@ p {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
+
     margin-bottom: 20px;
+    text-decoration: none;
     transition: background-color 0.3s, transform 0.3s;
 }
 
-.card:hover {
+.kompres:hover {
     background-color: #DDDDDD;
     transform: scale(1.05);
 }
 
-.card i {
+.kompres i {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -121,16 +131,17 @@ p {
     transition: transform 0.3s;
 }
 
-.card:hover i {
+.kompres:hover i {
     transform: scale(1.2);
 }
 
-.card h2 {
+
+.kompres h2 {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.card p {
+.kompres p {
     font-size: 16px;
     color: #666;
 }
@@ -144,3 +155,20 @@ p {
     height: auto;
 }
 
+.footer {
+    background-color: #fff;
+    padding: 0px 0;
+    text-align: center;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    font-size: 1px;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -2px 1px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin: 0;
+    color: #333;
+}
