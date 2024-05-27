@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\PdfController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -34,3 +37,8 @@ Route::get('/komprespng', function () {
 Route::get('/konvertaudio', function () {
     return view('konvertaudio');
 })->name('konvertaudio');
+
+// Action
+Route::post('/konvertaudio/action', [VideoController::class, 'convert'])->name('convert.video');
+Route::post('/komprespdf/action', [PdfController::class, 'convert'])->name('compress.pdf');
+Route::post('/komprespng/action', [ImageController::class, 'convert'])->name('compress.image');
