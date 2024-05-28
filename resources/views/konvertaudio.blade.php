@@ -17,7 +17,7 @@
         <form id="pdf-form" enctype="multipart/form-data" method="POST" action="{{route('convert.video')}}">
             @csrf
             <div>
-                <label for="pdf-file" class="file-input-button" style="color: #333A73; font-weight: bold;">Choose Video File</label>
+                <label for="pdf-file" class="file-input-button" >click here to select your Video File</label>
                 <input name="video" class="" type="file" id="pdf-file" accept="video/*" style="display: none;" required>
                 <span id="file-name" style="color: #A9A9A9;"></span>
             </div>
@@ -33,7 +33,7 @@
             var fileInput = document.getElementById('pdf-file');
             var fileName = fileInput.files[0].name;
             var fileExtension = fileName.split('.').pop().toLowerCase();
-            var allowedExtensions = ['mp4', 'avi', 'mov', 'mkv']; // Add more if needed
+            var allowedExtensions = ['mp4', 'avi', 'mov', 'mkv']; 
             if (!allowedExtensions.includes(fileExtension)) {
                 event.preventDefault();
                 alert('Please choose a valid video file (MP4, AVI, MOV, MKV).');

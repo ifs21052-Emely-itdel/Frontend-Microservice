@@ -24,7 +24,7 @@ body {
 
 p {
   font-weight: 200;
-  font-size: 2vw;
+  font-size: 1.5vw;
   line-height: 1.5; 
   color: #61677A;
   margin-bottom: 2vh; 
@@ -35,14 +35,24 @@ p {
   margin-top: 5vh; 
 }
 
+.file-input-button {
+  font-size: 1.5vw; 
+  display: inline-block;
+  margin-bottom: 3vh; 
+  cursor: pointer;
+  color: #5755FE; 
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.file-input-button:hover {
+  color: #D20062;
+}
+
+
+
 #pdf-file {
-  display: block;
-  margin: 0 auto;
-  margin-bottom: 3vh;
-  color: black;
-  background-color: none;
-  border: none;
-  padding: 10px;
+  display: none;
 }
 
 #convert-btn {

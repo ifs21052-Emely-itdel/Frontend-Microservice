@@ -15,7 +15,7 @@
         <form id="pdf-form" enctype="multipart/form-data" method="POST" action="{{route("compress.pdf")}}">
             @csrf
             <div>
-            <label for="pdf-file" class="file-input-button" style="color: #333A73; font-weight: bold;">Choose PDF File</label>
+            <label for="pdf-file" class="file-input-button"> click here to select your PDF file.</label>
             <input name="pedef" type="file" id="pdf-file" accept=".pdf" style="display: none;" required>
             <span id="file-name" style="color: #A9A9A9;"></span>
         </div>
