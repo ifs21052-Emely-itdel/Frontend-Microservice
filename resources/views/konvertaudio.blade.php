@@ -10,6 +10,7 @@
 </head>
 <body>
     @extends('template')
+
     <div class="container">
         <h1 class="pcn">Convert VIDEO to AUDIO</h1>
         <p>Make VIDEO files easy to listen by converting them to AUDIO.</p>
@@ -23,7 +24,10 @@
             <button type="submit" id="convert-btn">Convert VID</button>
         </form>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
     <script>
         document.getElementById('pdf-form').addEventListener('submit', function(event) {
             var fileInput = document.getElementById('pdf-file');
@@ -42,5 +46,24 @@
             document.getElementById('file-name').innerText = 'Selected file: ' + fileName;
         });
     </script>
+
+    <script>
+        document.getElementById('convert-btn').addEventListener('click', function () {
+            Swal.fire({
+                title: "Video Sedang Di Convert",
+                text: "Tunggu sampai video selesai di download",
+                icon: "info",
+                width: 600,
+                color: "#716add",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url({{ asset("/assets/img/cat-nyan-cat.gif") }})
+                    left top
+                    no-repeat
+                `
+            });
+        });
+    </script>
+
 </body>
 </html>

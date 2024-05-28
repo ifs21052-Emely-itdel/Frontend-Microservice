@@ -22,6 +22,9 @@
             <button type="submit" id="convert-btn">Convert PNG</button>
         </form>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         // Event listener untuk form submit
         document.getElementById('pdf-form').addEventListener('submit', function(event) {
@@ -44,6 +47,24 @@
         document.getElementById('pdf-file').addEventListener('change', function() {
             var fileName = this.files[0].name;
             document.getElementById('file-name').innerText = 'Selected file: ' + fileName;
+        });
+    </script>
+
+    <script>
+        document.getElementById('convert-btn').addEventListener('click', function () {
+            Swal.fire({
+                title: "Gambar Sedang Di Compress",
+                text: "Tunggu sampai gambar selesai di download",
+                icon: "info",
+                width: 600,
+                color: "#716add",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url({{ asset("/assets/img/cat-nyan-cat.gif") }})
+                    left top
+                    no-repeat
+                `
+            });
         });
     </script>
     

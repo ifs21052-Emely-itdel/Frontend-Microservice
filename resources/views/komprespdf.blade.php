@@ -23,11 +23,32 @@
         </form>
 
     </div>
+
     <script src="{{ asset("/assets/js/komprespdf.js") }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <script>
         document.getElementById('pdf-file').addEventListener('change', function() {
             var fileName = this.files[0].name;
             document.getElementById('file-name').innerText = 'Selected file: ' + fileName;
+        });
+    </script>
+
+    <script>
+        document.getElementById('convert-btn').addEventListener('click', function () {
+            Swal.fire({
+                title: "File PDF Sedang Di Compress",
+                text: "Tunggu sampai file PDF selesai di download",
+                icon: "info",
+                width: 600,
+                color: "#716add",
+                backdrop: `
+                    rgba(0,0,123,0.4)
+                    url({{ asset("/assets/img/cat-nyan-cat.gif") }})
+                    left top
+                    no-repeat
+                `
+            });
         });
     </script>
 </body>
