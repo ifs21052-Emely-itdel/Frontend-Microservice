@@ -16,7 +16,7 @@ class ImageController extends Controller
         $client = new Client();
 
         try {
-            $response = $client->post(env("API_URL_IMAGE")."/compress", [
+            $response = $client->post(env("API_GATEWAY")."/compress", [
                 "multipart" => [
                     [
                         "name" => "image",

@@ -16,7 +16,7 @@ class PdfController extends Controller
         $client = new Client();
 
         try {
-            $response = $client->post(env("API_URL_PDF")."/pdf-compress/", [
+            $response = $client->post(env("API_GATEWAY")."/pdf-compress", [
                 "multipart" => [
                     [
                         "name" => "pdf",

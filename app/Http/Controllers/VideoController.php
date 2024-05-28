@@ -15,7 +15,7 @@ class VideoController extends Controller
         // dd($video);
         
         try {
-            $response = $client->post(env("API_URL_VIDEO")."/convert-to-audio", [
+            $response = $client->post(env("API_GATEWAY")."/convert-to-audio", [
                 "multipart" => [
                     [
                         "name" => "video",
