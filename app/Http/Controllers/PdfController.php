@@ -35,7 +35,7 @@ class PdfController extends Controller
             return response()->download($pedefPath)->deleteFileAfterSend(true);
 
         } catch(\Exception $e) {
-            return back()->withErrors(["error"=>"failed to convert video to audio"]);
+            return back()->withErrors(["error"=>"failed to compress pdf"]);
         }        
     }
 }
