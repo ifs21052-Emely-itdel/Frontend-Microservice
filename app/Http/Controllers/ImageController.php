@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ImageController extends Controller
 {
@@ -16,6 +17,7 @@ class ImageController extends Controller
         $client = new Client();
 
         try {
+
             $response = $client->post(env("API_GATEWAY")."/compress", [
                 "multipart" => [
                     [
@@ -35,6 +37,7 @@ class ImageController extends Controller
             return response()->download($imagePath)->deleteFileAfterSend(true);
 
         } catch(\Exception $e) {
+            
             return back()->withErrors(["error"=>"failed to compress image"]);
         }        
     }

@@ -49,18 +49,57 @@
 
     <script>
         document.getElementById('convert-btn').addEventListener('click', function () {
+            setTimeout(function() {
+                Swal.fire({
+                    title: "Video Sedang Di Convert",
+                    text: "Tunggu sampai video selesai di download",
+                    icon: "info",
+                    width: 600,
+                    color: "#716add",
+                    backdrop: `
+                        rgba(0,0,123,0.4)
+                        url({{ asset("/assets/img/cat-nyan-cat.gif") }})
+                        left top
+                        no-repeat
+                    `
+                });
+            },)
+        });
+    </script>
+
+    @if ($errors->any())
+    @foreach ($errors->all() as $error)
+        <script>
             Swal.fire({
-                title: "Video Sedang Di Convert",
-                text: "Tunggu sampai video selesai di download",
-                icon: "info",
-                width: 600,
-                color: "#716add",
-                backdrop: `
-                    rgba(0,0,123,0.4)
-                    url({{ asset("/assets/img/cat-nyan-cat.gif") }})
-                    left top
-                    no-repeat
-                `
+                icon: "error",
+                title: "Server Error",
+                text: "{!! $error !!}",
+            });
+        </script>
+    @endforeach
+    @endif
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileInput = document.getElementById('pdf-file');
+            const convertBtn = document.getElementById('convert-btn');
+
+            // Nonaktifkan tombol "Convert PDF" secara default
+            convertBtn.disabled = true;
+
+            // Tambahkan event listener untuk mendeteksi perubahan pada input file
+            fileInput.addEventListener('change', function() {
+                // Periksa apakah file telah dipilih
+                if (fileInput.files.length > 0) {
+                    // Aktifkan tombol "Convert PDF" jika file telah dipilih
+                    convertBtn.disabled = false;
+                    const fileName = fileInput.files[0].name;
+                    document.getElementById('file-name').innerText = 'Selected file: ' + fileName;
+                } else {
+                    // Biarkan tombol "Convert PDF" tetap nonaktif jika tidak ada file yang dipilih
+                    convertBtn.disabled = true;
+                    document.getElementById('file-name').innerText = '';
+                }
             });
         });
     </script>
